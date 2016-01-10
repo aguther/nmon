@@ -1,5 +1,5 @@
 Name:			nmon
-Version:		16b
+Version:		15g
 Release:		1%{?dist}
 Summary:		Nigel's performance Monitor for Linux
 License:		GPLv3
@@ -17,13 +17,13 @@ information about CPU, disks, network, etc., all in one view.
 %setup -q
 sed -e "s/\r//" Documentation.txt > Documentation.txt
 touch -c -r Documentation.txt Documentation.txt
-ln -s lmon%{version}.c lmon.c
+ln -fs lmon%{version}.c lmon.c
 
 %build
-make %{_smp_mflags}
+make %{_smp_mflags} nmon_x86_rhel6
 
 %install
-install -D -p -m 0755 %{name}_* %{buildroot}%{_bindir}/%{name}
+install -D -p -m 0755 %{name}_x86_rhel6 %{buildroot}%{_bindir}/%{name}
 install -D -p -m 0644 %{name}.1 %{buildroot}%{_mandir}/man1/%{name}.1
 
 %files
@@ -32,8 +32,8 @@ install -D -p -m 0644 %{name}.1 %{buildroot}%{_mandir}/man1/%{name}.1
 %{_bindir}/%{name}
 
 %changelog
-* Sun Jan 10 2016 Andreas Guther <github@guther.net> - 16b-1
-- Update to version 16b
+* Sun Jan 10 2016 Andreas Guther <github@guther.net> - 15g-1
+- Update to version 15g
 
 * Sun Aug 17 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 14i-8
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_21_22_Mass_Rebuild
