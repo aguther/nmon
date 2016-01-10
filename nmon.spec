@@ -1,13 +1,13 @@
-Name:           nmon
-Version:        16b
-Release:        1%{?dist}
-Summary:        Nigel's performance Monitor for Linux 
-License:        GPLv3
-Group: 		Development/Tools
-URL:            http://nmon.sourceforge.net
-Source: 	http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-BuildRequires:  ncurses-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+Name:			nmon
+Version:		16b
+Release:		1%{?dist}
+Summary:		Nigel's performance Monitor for Linux
+License:		GPLv3
+Group:			Development/Tools
+URL:			http://nmon.sourceforge.net
+Source:			http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+BuildRequires:	ncurses-devel
+BuildRoot:		%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 %description
 nmon is a systems administrator, tuner, benchmark tool, which provides 
