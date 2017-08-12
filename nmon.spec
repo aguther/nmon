@@ -1,5 +1,5 @@
 Name:			nmon
-Version:		15g
+Version:		16f
 Release:		1%{?dist}
 Summary:		Nigel's performance Monitor for Linux
 License:		GPLv3
@@ -32,6 +32,9 @@ install -D -p -m 0644 %{name}.1 %{buildroot}%{_mandir}/man1/%{name}.1
 %{_bindir}/%{name}
 
 %changelog
+* Sat Aug 12 2017 Andreas Guther <github@guther.net> - 16f-1
+- Update to version 16f
+
 * Sun Jan 10 2016 Andreas Guther <github@guther.net> - 15g-1
 - Update to version 15g
 
